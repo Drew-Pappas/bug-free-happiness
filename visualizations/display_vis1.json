@@ -6,6 +6,7 @@
   },
   "data": {"name": "data-30221a791607bc50af2a4151c29f26fe"},
   "mark": "bar",
+  "background": "transparent",
   "encoding": {
     "color": {
       "type": "nominal",

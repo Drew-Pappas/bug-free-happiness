@@ -16,7 +16,7 @@
       "encoding": {
         "detail": {"type": "nominal", "field": "country_code"},
         "opacity": {
-          "condition": {"value": 1, "selection": "selector048"},
+          "condition": {"value": 1, "selection": "selector001"},
           "value": 0
         },
         "x": {"type": "quantitative", "field": "mean_hdi"},
@@ -73,7 +73,7 @@
         }
       },
       "selection": {
-        "selector048": {
+        "selector001": {
           "type": "single",
           "fields": ["country_code"],
           "on": "click",
@@ -86,7 +86,7 @@
       "mark": {"type": "text", "dx": -50, "dy": -50, "size": 15},
       "encoding": {
         "opacity": {
-          "condition": {"value": 1, "selection": "selector048"},
+          "condition": {"value": 1, "selection": "selector001"},
           "value": 0
         },
         "text": {"type": "nominal", "field": "slope"},
@@ -95,6 +95,7 @@
       }
     }
   ],
+  "background": "transparent",
   "encoding": {
     "tooltip": [
       {"type": "nominal", "field": "country_code"},

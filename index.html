@@ -13,25 +13,25 @@
 
     <main>
       <div class ='vis_container'>
-        <p class = 'vis_text'>Norway's combined medal count is higher than any other nation's. </p>
-        <div id="vis1" class = 'visualization_button' onclick=display_vis(this)>Visualization1</div>
+        <p class = 'vis_text'>Norway's combined medal count is higher than any other nation's. They aren't only winning bronze medals either. They win all medal types and have nearly double their closest competitor's medal count. Has their success been consistent over time?</p>
+        <div id="vis1" class = 'visualization_button' onclick=display_vis(this)>Unrivaled</div>
       </div>
 
       <div class ='vis_container'>
-        <p class = 'vis_text'>Despite being a country with a population lower than the state of Wisconsins', Norway consistently manages to win more medals than other countries. The dotted red line in the left time series below indicates the average number of medals earned by a country in that particular year.</p>
-        <div id="vis2" class = 'visualization_button' onclick=display_vis(this)>Visualization2</div>
+        <p class = 'vis_text'>In fact, it has! Despite being a country with a population lower than the state of Wisconsins', Norway consistently manages to win more medals each year than most other countries. The dotted red line in the left time series below indicates the average number of medals earned by a country in that particular year. Selecting a country in the dropdown menu will show their performance compared to Norway and the breakdown of their medal counts over time. Why does such a small country perform so well compared to others across the globe?</p>
+        <div id="vis2" class = 'visualization_button' onclick=display_vis(this)>Time Tested</div>
       </div>
     
       <div class ='vis_container'>
         <p class = 'vis_text'>Norway has the second highest number of facilities for winter sports in the world, second only to Russia. However, Russia has a population of 144.5 million compared to Norway's 5.3 million. With 73 facilities, Norway has a ratio of rinks to people of 71 thousand to 1, compared to Russia's 1.8 million to 1. The average Norwegian has a lot of opportunity to practice.</p>
-        <div id="vis3" class = 'visualization_button' onclick=display_vis(this)>Visualization3</div>
+        <div id="vis3" class = 'visualization_button' onclick=display_vis(this)>Infrastructure Rich</div>
       </div>
 
       <div class ='vis_container'>
         <p class = 'vis_text'>Norway's success stems primarily from their wealth and quality of life for their citizens. Norway has the second highest GDP per capita and highest average score on the UN's Human Development Index, which measures education, wealth, and life expectancy across a nation. Clicking on any nation will reveal the slope of the line from their country to Norway. The slope represents the number of HDI points per medal they would need to earn to be where Norway is today.</p>
-        <div id="vis4" class = 'visualization_button' onclick=display_vis(this)>Visualization4</div>
+        <div id="vis4" class = 'visualization_button' onclick=display_vis(this)>It Pays to be Wealthy</div>
       </div>
-      
+      <div id = 'test'>test</div>
 
     </main>
 
@@ -50,6 +50,7 @@
         vis.onclick = undefined;
         vis.classList.remove("visualization_button");
         vis.classList.add("visualization_expanded");
+        vis.innerHTML='';
 
       }
       </script>

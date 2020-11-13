@@ -65,5 +65,8 @@ option {
 
 label {
     font-size: 2rem;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

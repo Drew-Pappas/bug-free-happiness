@@ -2,7 +2,7 @@
   "config": {
     "view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0},
     "axis": {"labelFontSize": 14, "titleFontSize": 16},
-    "legend": {"gradientLength": 200, "gradientThickness": 30, "orient": "none"}
+    "legend": {"gradientLength": 400, "gradientThickness": 30, "orient": "none"}
   },
   "layer": [
     {
@@ -16,7 +16,7 @@
       "encoding": {
         "detail": {"type": "nominal", "field": "country_code"},
         "opacity": {
-          "condition": {"value": 1, "selection": "selector001"},
+          "condition": {"value": 1, "selection": "selector048"},
           "value": 0
         },
         "x": {"type": "quantitative", "field": "mean_hdi"},
@@ -40,7 +40,11 @@
         },
         "y": {
           "type": "quantitative",
-          "axis": {"grid": false, "orient": "right", "title": null},
+          "axis": {
+            "grid": false,
+            "orient": "right",
+            "title": "Total Medals Earned"
+          },
           "field": "total_medals",
           "scale": {"padding": 3}
         }
@@ -59,13 +63,17 @@
         },
         "y": {
           "type": "quantitative",
-          "axis": {"grid": false, "orient": "right", "title": null},
+          "axis": {
+            "grid": false,
+            "orient": "right",
+            "title": "Total Medals Earned"
+          },
           "field": "total_medals",
           "scale": {"padding": 3}
         }
       },
       "selection": {
-        "selector001": {
+        "selector048": {
           "type": "single",
           "fields": ["country_code"],
           "on": "click",
@@ -78,7 +86,7 @@
       "mark": {"type": "text", "dx": -50, "dy": -50, "size": 15},
       "encoding": {
         "opacity": {
-          "condition": {"value": 1, "selection": "selector001"},
+          "condition": {"value": 1, "selection": "selector048"},
           "value": 0
         },
         "text": {"type": "nominal", "field": "slope"},

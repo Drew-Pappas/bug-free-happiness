@@ -1,0 +1,382 @@
+{
+  "config": {
+    "view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": null},
+    "concat": {"spacing": 0}
+  },
+  "vconcat": [
+    {
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "color": {
+              "type": "quantitative",
+              "condition": {"value": "#C74643", "selection": "selector002"},
+              "field": "rink_count",
+              "legend": {
+                "gradientLength": 200,
+                "gradientThickness": 30,
+                "legendX": 700,
+                "legendY": 175,
+                "orient": "none",
+                "title": "Rink Count",
+                "titleAlign": "center",
+                "titleAnchor": "middle"
+              },
+              "scale": {"scheme": "tealblues"}
+            },
+            "tooltip": {"type": "quantitative", "field": "rink_count"},
+            "x": {
+              "type": "nominal",
+              "axis": null,
+              "field": "country_name",
+              "sort": "-y"
+            },
+            "y": {"type": "quantitative", "axis": null, "field": "rink_count"}
+          },
+          "selection": {
+            "selector002": {
+              "type": "single",
+              "on": "mouseover",
+              "empty": "none",
+              "fields": ["rink_count"]
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "angle": 290,
+            "dx": 5,
+            "size": 14
+          },
+          "encoding": {
+            "text": {"type": "nominal", "field": "country_name"},
+            "tooltip": {"type": "quantitative", "field": "rink_count"},
+            "x": {
+              "type": "nominal",
+              "axis": null,
+              "field": "country_name",
+              "sort": "-y"
+            },
+            "y": {"type": "quantitative", "axis": null, "field": "rink_count"}
+          }
+        }
+      ],
+      "data": {"name": "data-868b89c6219e914a05ae6849f961d0b3"},
+      "width": 400
+    },
+    {
+      "layer": [
+        {
+          "data": {"sphere": true},
+          "mark": {"type": "geoshape", "fill": "#e6f3ff"}
+        },
+        {
+          "data": {"graticule": true},
+          "mark": {"type": "geoshape", "stroke": "#ffffff", "strokeWidth": 1.5}
+        },
+        {
+          "data": {
+            "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+            "format": {"feature": "countries", "type": "topojson"}
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": "#2a1d0c",
+            "stroke": "#000000",
+            "strokeWidth": 0.5
+          }
+        },
+        {
+          "data": {
+            "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+            "format": {"feature": "countries", "type": "topojson"}
+          },
+          "mark": "geoshape",
+          "encoding": {
+            "color": {
+              "type": "quantitative",
+              "condition": {"value": "#C74643", "selection": "selector002"},
+              "field": "rink_count",
+              "legend": {
+                "gradientLength": 200,
+                "gradientThickness": 30,
+                "legendX": 700,
+                "legendY": 175,
+                "orient": "none",
+                "title": "Rink Count",
+                "titleAlign": "center",
+                "titleAnchor": "middle"
+              },
+              "scale": {"scheme": "tealblues"}
+            },
+            "tooltip": [
+              {
+                "type": "nominal",
+                "field": "properties.name",
+                "title": "Country"
+              },
+              {
+                "type": "quantitative",
+                "field": "rink_count",
+                "title": "Number of Rinks"
+              }
+            ]
+          },
+          "selection": {
+            "selector002": {
+              "type": "single",
+              "on": "mouseover",
+              "empty": "none",
+              "fields": ["rink_count"]
+            }
+          },
+          "transform": [
+            {
+              "lookup": "id",
+              "from": {
+                "data": {"name": "data-190d4f060ea0d87eff5c96ebd7256c7f"},
+                "key": "id",
+                "fields": ["country_name", "rink_count"]
+              }
+            }
+          ]
+        }
+      ],
+      "height": 400,
+      "projection": {
+        "scale": 130,
+        "translate": [362.5, 200],
+        "type": "naturalEarth1"
+      },
+      "width": 725
+    }
+  ],
+  "center": true,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-868b89c6219e914a05ae6849f961d0b3": [
+      {"country_code": "NOR", "rink_count": 73, "country_name": "Norway"},
+      {"country_code": "RUS", "rink_count": 79, "country_name": "Russia"},
+      {"country_code": "NED", "rink_count": 43, "country_name": "Netherlands"},
+      {"country_code": "SWE", "rink_count": 34, "country_name": "Sweden"},
+      {"country_code": "JPN", "rink_count": 27, "country_name": "Japan"},
+      {"country_code": "FIN", "rink_count": 26, "country_name": "Finland"},
+      {"country_code": "GER", "rink_count": 16, "country_name": "Germany"},
+      {"country_code": "CAN", "rink_count": 15, "country_name": "Canada"},
+      {"country_code": "POL", "rink_count": 10, "country_name": "Poland"},
+      {"country_code": "CHN", "rink_count": 10, "country_name": "China"},
+      {
+        "country_code": "USA",
+        "rink_count": 9,
+        "country_name": "United States of America"
+      },
+      {"country_code": "ITA", "rink_count": 7, "country_name": "Italy"},
+      {"country_code": "KOR", "rink_count": 7, "country_name": "South Korea"},
+      {"country_code": "KAZ", "rink_count": 6, "country_name": "Kazakhstan"},
+      {"country_code": "SUI", "rink_count": 4, "country_name": "Switzerland"},
+      {"country_code": "AUT", "rink_count": 3, "country_name": "Austria"},
+      {"country_code": "FRA", "rink_count": 3, "country_name": "France"},
+      {"country_code": "EST", "rink_count": 2, "country_name": "Estonia"},
+      {"country_code": "HUN", "rink_count": 2, "country_name": "Hungary"},
+      {
+        "country_code": "GBR",
+        "rink_count": 2,
+        "country_name": "United Kingdom"
+      },
+      {"country_code": "BLR", "rink_count": 1, "country_name": "Belarus"},
+      {
+        "country_code": "YUG",
+        "rink_count": 1,
+        "country_name": "Bosnia and Herz"
+      },
+      {"country_code": "LAT", "rink_count": 1, "country_name": "Latvia"},
+      {"country_code": "MGL", "rink_count": 1, "country_name": "Mongolia"},
+      {"country_code": "UKR", "rink_count": 1, "country_name": "Ukraine"},
+      {"country_code": "ARG", "rink_count": 1, "country_name": "Argentina"}
+    ],
+    "data-190d4f060ea0d87eff5c96ebd7256c7f": [
+      {"id": "242", "country_name": "Fiji", "rink_count": 0},
+      {"id": "834", "country_name": "Tanzania", "rink_count": 0},
+      {"id": "732", "country_name": "W. Sahara", "rink_count": 0},
+      {"id": "124", "country_name": "Canada", "rink_count": 15},
+      {
+        "id": "840",
+        "country_name": "United States of America",
+        "rink_count": 9
+      },
+      {"id": "398", "country_name": "Kazakhstan", "rink_count": 6},
+      {"id": "860", "country_name": "Uzbekistan", "rink_count": 0},
+      {"id": "598", "country_name": "Papua New Guinea", "rink_count": 0},
+      {"id": "360", "country_name": "Indonesia", "rink_count": 0},
+      {"id": "032", "country_name": "Argentina", "rink_count": 1},
+      {"id": "152", "country_name": "Chile", "rink_count": 0},
+      {"id": "180", "country_name": "Dem. Rep. Congo", "rink_count": 0},
+      {"id": "706", "country_name": "Somalia", "rink_count": 0},
+      {"id": "404", "country_name": "Kenya", "rink_count": 0},
+      {"id": "729", "country_name": "Sudan", "rink_count": 0},
+      {"id": "148", "country_name": "Chad", "rink_count": 0},
+      {"id": "332", "country_name": "Haiti", "rink_count": 0},
+      {"id": "214", "country_name": "Dominican Rep.", "rink_count": 0},
+      {"id": "643", "country_name": "Russia", "rink_count": 79},
+      {"id": "044", "country_name": "Bahamas", "rink_count": 0},
+      {"id": "238", "country_name": "Falkland Is.", "rink_count": 0},
+      {"id": "578", "country_name": "Norway", "rink_count": 73},
+      {"id": "304", "country_name": "Greenland", "rink_count": 0},
+      {"id": "260", "country_name": "Fr. S. Antarctic Lands", "rink_count": 0},
+      {"id": "626", "country_name": "Timor-Leste", "rink_count": 0},
+      {"id": "710", "country_name": "South Africa", "rink_count": 0},
+      {"id": "426", "country_name": "Lesotho", "rink_count": 0},
+      {"id": "484", "country_name": "Mexico", "rink_count": 0},
+      {"id": "858", "country_name": "Uruguay", "rink_count": 0},
+      {"id": "076", "country_name": "Brazil", "rink_count": 0},
+      {"id": "068", "country_name": "Bolivia", "rink_count": 0},
+      {"id": "604", "country_name": "Peru", "rink_count": 0},
+      {"id": "170", "country_name": "Colombia", "rink_count": 0},
+      {"id": "591", "country_name": "Panama", "rink_count": 0},
+      {"id": "188", "country_name": "Costa Rica", "rink_count": 0},
+      {"id": "558", "country_name": "Nicaragua", "rink_count": 0},
+      {"id": "340", "country_name": "Honduras", "rink_count": 0},
+      {"id": "222", "country_name": "El Salvador", "rink_count": 0},
+      {"id": "320", "country_name": "Guatemala", "rink_count": 0},
+      {"id": "084", "country_name": "Belize", "rink_count": 0},
+      {"id": "862", "country_name": "Venezuela", "rink_count": 0},
+      {"id": "328", "country_name": "Guyana", "rink_count": 0},
+      {"id": "740", "country_name": "Suriname", "rink_count": 0},
+      {"id": "250", "country_name": "France", "rink_count": 3},
+      {"id": "218", "country_name": "Ecuador", "rink_count": 0},
+      {"id": "630", "country_name": "Puerto Rico", "rink_count": 0},
+      {"id": "388", "country_name": "Jamaica", "rink_count": 0},
+      {"id": "192", "country_name": "Cuba", "rink_count": 0},
+      {"id": "716", "country_name": "Zimbabwe", "rink_count": 0},
+      {"id": "072", "country_name": "Botswana", "rink_count": 0},
+      {"id": "516", "country_name": "Namibia", "rink_count": 0},
+      {"id": "686", "country_name": "Senegal", "rink_count": 0},
+      {"id": "466", "country_name": "Mali", "rink_count": 0},
+      {"id": "478", "country_name": "Mauritania", "rink_count": 0},
+      {"id": "204", "country_name": "Benin", "rink_count": 0},
+      {"id": "562", "country_name": "Niger", "rink_count": 0},
+      {"id": "566", "country_name": "Nigeria", "rink_count": 0},
+      {"id": "120", "country_name": "Cameroon", "rink_count": 0},
+      {"id": "768", "country_name": "Togo", "rink_count": 0},
+      {"id": "288", "country_name": "Ghana", "rink_count": 0},
+      {"id": "384", "country_name": "CÃ´te d'Ivoire", "rink_count": 0},
+      {"id": "324", "country_name": "Guinea", "rink_count": 0},
+      {"id": "624", "country_name": "Guinea-Bissau", "rink_count": 0},
+      {"id": "430", "country_name": "Liberia", "rink_count": 0},
+      {"id": "694", "country_name": "Sierra Leone", "rink_count": 0},
+      {"id": "854", "country_name": "Burkina Faso", "rink_count": 0},
+      {"id": "140", "country_name": "Central African Rep.", "rink_count": 0},
+      {"id": "178", "country_name": "Congo", "rink_count": 0},
+      {"id": "266", "country_name": "Gabon", "rink_count": 0},
+      {"id": "226", "country_name": "Eq. Guinea", "rink_count": 0},
+      {"id": "894", "country_name": "Zambia", "rink_count": 0},
+      {"id": "454", "country_name": "Malawi", "rink_count": 0},
+      {"id": "508", "country_name": "Mozambique", "rink_count": 0},
+      {"id": "748", "country_name": "eSwatini", "rink_count": 0},
+      {"id": "024", "country_name": "Angola", "rink_count": 0},
+      {"id": "108", "country_name": "Burundi", "rink_count": 0},
+      {"id": "376", "country_name": "Israel", "rink_count": 0},
+      {"id": "422", "country_name": "Lebanon", "rink_count": 0},
+      {"id": "450", "country_name": "Madagascar", "rink_count": 0},
+      {"id": "275", "country_name": "Palestine", "rink_count": 0},
+      {"id": "270", "country_name": "Gambia", "rink_count": 0},
+      {"id": "788", "country_name": "Tunisia", "rink_count": 0},
+      {"id": "012", "country_name": "Algeria", "rink_count": 0},
+      {"id": "400", "country_name": "Jordan", "rink_count": 0},
+      {"id": "784", "country_name": "United Arab Emirates", "rink_count": 0},
+      {"id": "634", "country_name": "Qatar", "rink_count": 0},
+      {"id": "414", "country_name": "Kuwait", "rink_count": 0},
+      {"id": "368", "country_name": "Iraq", "rink_count": 0},
+      {"id": "512", "country_name": "Oman", "rink_count": 0},
+      {"id": "548", "country_name": "Vanuatu", "rink_count": 0},
+      {"id": "116", "country_name": "Cambodia", "rink_count": 0},
+      {"id": "764", "country_name": "Thailand", "rink_count": 0},
+      {"id": "418", "country_name": "Laos", "rink_count": 0},
+      {"id": "104", "country_name": "Myanmar", "rink_count": 0},
+      {"id": "704", "country_name": "Vietnam", "rink_count": 0},
+      {"id": "408", "country_name": "North Korea", "rink_count": 0},
+      {"id": "410", "country_name": "South Korea", "rink_count": 7},
+      {"id": "496", "country_name": "Mongolia", "rink_count": 1},
+      {"id": "356", "country_name": "India", "rink_count": 0},
+      {"id": "050", "country_name": "Bangladesh", "rink_count": 0},
+      {"id": "064", "country_name": "Bhutan", "rink_count": 0},
+      {"id": "524", "country_name": "Nepal", "rink_count": 0},
+      {"id": "586", "country_name": "Pakistan", "rink_count": 0},
+      {"id": "004", "country_name": "Afghanistan", "rink_count": 0},
+      {"id": "762", "country_name": "Tajikistan", "rink_count": 0},
+      {"id": "417", "country_name": "Kyrgyzstan", "rink_count": 0},
+      {"id": "795", "country_name": "Turkmenistan", "rink_count": 0},
+      {"id": "364", "country_name": "Iran", "rink_count": 0},
+      {"id": "760", "country_name": "Syria", "rink_count": 0},
+      {"id": "051", "country_name": "Armenia", "rink_count": 0},
+      {"id": "752", "country_name": "Sweden", "rink_count": 34},
+      {"id": "112", "country_name": "Belarus", "rink_count": 1},
+      {"id": "804", "country_name": "Ukraine", "rink_count": 1},
+      {"id": "616", "country_name": "Poland", "rink_count": 10},
+      {"id": "040", "country_name": "Austria", "rink_count": 3},
+      {"id": "348", "country_name": "Hungary", "rink_count": 2},
+      {"id": "498", "country_name": "Moldova", "rink_count": 0},
+      {"id": "642", "country_name": "Romania", "rink_count": 0},
+      {"id": "440", "country_name": "Lithuania", "rink_count": 0},
+      {"id": "428", "country_name": "Latvia", "rink_count": 1},
+      {"id": "233", "country_name": "Estonia", "rink_count": 2},
+      {"id": "276", "country_name": "Germany", "rink_count": 16},
+      {"id": "100", "country_name": "Bulgaria", "rink_count": 0},
+      {"id": "300", "country_name": "Greece", "rink_count": 0},
+      {"id": "792", "country_name": "Turkey", "rink_count": 0},
+      {"id": "008", "country_name": "Albania", "rink_count": 0},
+      {"id": "191", "country_name": "Croatia", "rink_count": 0},
+      {"id": "756", "country_name": "Switzerland", "rink_count": 4},
+      {"id": "442", "country_name": "Luxembourg", "rink_count": 0},
+      {"id": "056", "country_name": "Belgium", "rink_count": 0},
+      {"id": "528", "country_name": "Netherlands", "rink_count": 43},
+      {"id": "620", "country_name": "Portugal", "rink_count": 0},
+      {"id": "724", "country_name": "Spain", "rink_count": 0},
+      {"id": "372", "country_name": "Ireland", "rink_count": 0},
+      {"id": "540", "country_name": "New Caledonia", "rink_count": 0},
+      {"id": "090", "country_name": "Solomon Is.", "rink_count": 0},
+      {"id": "554", "country_name": "New Zealand", "rink_count": 0},
+      {"id": "036", "country_name": "Australia", "rink_count": 0},
+      {"id": "144", "country_name": "Sri Lanka", "rink_count": 0},
+      {"id": "156", "country_name": "China", "rink_count": 10},
+      {"id": "158", "country_name": "Taiwan", "rink_count": 0},
+      {"id": "380", "country_name": "Italy", "rink_count": 7},
+      {"id": "208", "country_name": "Denmark", "rink_count": 0},
+      {"id": "826", "country_name": "United Kingdom", "rink_count": 2},
+      {"id": "352", "country_name": "Iceland", "rink_count": 0},
+      {"id": "031", "country_name": "Azerbaijan", "rink_count": 0},
+      {"id": "268", "country_name": "Georgia", "rink_count": 0},
+      {"id": "608", "country_name": "Philippines", "rink_count": 0},
+      {"id": "458", "country_name": "Malaysia", "rink_count": 0},
+      {"id": "096", "country_name": "Brunei", "rink_count": 0},
+      {"id": "705", "country_name": "Slovenia", "rink_count": 0},
+      {"id": "246", "country_name": "Finland", "rink_count": 26},
+      {"id": "703", "country_name": "Slovakia", "rink_count": 0},
+      {"id": "203", "country_name": "Czechia", "rink_count": 0},
+      {"id": "232", "country_name": "Eritrea", "rink_count": 0},
+      {"id": "392", "country_name": "Japan", "rink_count": 27},
+      {"id": "600", "country_name": "Paraguay", "rink_count": 0},
+      {"id": "887", "country_name": "Yemen", "rink_count": 0},
+      {"id": "682", "country_name": "Saudi Arabia", "rink_count": 0},
+      {"id": "010", "country_name": "Antarctica", "rink_count": 0},
+      {"id": "196", "country_name": "Cyprus", "rink_count": 0},
+      {"id": "504", "country_name": "Morocco", "rink_count": 0},
+      {"id": "818", "country_name": "Egypt", "rink_count": 0},
+      {"id": "434", "country_name": "Libya", "rink_count": 0},
+      {"id": "231", "country_name": "Ethiopia", "rink_count": 0},
+      {"id": "262", "country_name": "Djibouti", "rink_count": 0},
+      {"id": "800", "country_name": "Uganda", "rink_count": 0},
+      {"id": "646", "country_name": "Rwanda", "rink_count": 0},
+      {"id": "070", "country_name": "Bosnia and Herz.", "rink_count": 0},
+      {"id": "807", "country_name": "Macedonia", "rink_count": 0},
+      {"id": "688", "country_name": "Serbia", "rink_count": 0},
+      {"id": "499", "country_name": "Montenegro", "rink_count": 0},
+      {"id": "780", "country_name": "Trinidad and Tobago", "rink_count": 0},
+      {"id": "728", "country_name": "S. Sudan", "rink_count": 0},
+      {"id": "070", "country_name": "Bosnia and Herz", "rink_count": 1}
+    ]
+  }
+}

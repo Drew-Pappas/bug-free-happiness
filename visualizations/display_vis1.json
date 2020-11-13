@@ -1,0 +1,819 @@
+{
+  "config": {
+    "view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0},
+    "axis": {"labelFontSize": 14, "titleAngle": 0, "titleFontSize": 16},
+    "legend": {"labelFontSize": 12, "titleFontSize": 14}
+  },
+  "data": {"name": "data-30221a791607bc50af2a4151c29f26fe"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "medal_type",
+      "legend": {"orient": "bottom", "title": "Medal Type"},
+      "scale": {
+        "domain": ["Bronze", "Silver", "Gold"],
+        "range": ["#A77044", "#A7A7AD", "#D6AF36"]
+      }
+    },
+    "order": {"type": "quantitative", "field": "stack_order"},
+    "tooltip": [
+      {"type": "quantitative", "field": "total_medals", "title": "Total Medals"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"grid": false, "orient": "top", "title": "Total Medal Counts"},
+      "field": "medal_counts"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": null},
+      "field": "country_code",
+      "sort": "-x"
+    }
+  },
+  "height": 600,
+  "width": 800,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-30221a791607bc50af2a4151c29f26fe": [
+      {
+        "country_code": "AUS",
+        "medal_type": "Gold",
+        "medal_counts": 2,
+        "stack_order": 2,
+        "total_medals": 5
+      },
+      {
+        "country_code": "AUS",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 5
+      },
+      {
+        "country_code": "AUS",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 5
+      },
+      {
+        "country_code": "AUT",
+        "medal_type": "Bronze",
+        "medal_counts": 56,
+        "stack_order": 0,
+        "total_medals": 146
+      },
+      {
+        "country_code": "AUT",
+        "medal_type": "Silver",
+        "medal_counts": 49,
+        "stack_order": 1,
+        "total_medals": 146
+      },
+      {
+        "country_code": "AUT",
+        "medal_type": "Gold",
+        "medal_counts": 41,
+        "stack_order": 2,
+        "total_medals": 146
+      },
+      {
+        "country_code": "BEL",
+        "medal_type": "Bronze",
+        "medal_counts": 2,
+        "stack_order": 0,
+        "total_medals": 4
+      },
+      {
+        "country_code": "BEL",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 4
+      },
+      {
+        "country_code": "BEL",
+        "medal_type": "Silver",
+        "medal_counts": 1,
+        "stack_order": 1,
+        "total_medals": 4
+      },
+      {
+        "country_code": "BLR",
+        "medal_type": "Bronze",
+        "medal_counts": 5,
+        "stack_order": 0,
+        "total_medals": 13
+      },
+      {
+        "country_code": "BLR",
+        "medal_type": "Gold",
+        "medal_counts": 5,
+        "stack_order": 2,
+        "total_medals": 13
+      },
+      {
+        "country_code": "BLR",
+        "medal_type": "Silver",
+        "medal_counts": 3,
+        "stack_order": 1,
+        "total_medals": 13
+      },
+      {
+        "country_code": "BUL",
+        "medal_type": "Bronze",
+        "medal_counts": 2,
+        "stack_order": 0,
+        "total_medals": 3
+      },
+      {
+        "country_code": "BUL",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 3
+      },
+      {
+        "country_code": "CAN",
+        "medal_type": "Gold",
+        "medal_counts": 37,
+        "stack_order": 2,
+        "total_medals": 102
+      },
+      {
+        "country_code": "CAN",
+        "medal_type": "Bronze",
+        "medal_counts": 33,
+        "stack_order": 0,
+        "total_medals": 102
+      },
+      {
+        "country_code": "CAN",
+        "medal_type": "Silver",
+        "medal_counts": 32,
+        "stack_order": 1,
+        "total_medals": 102
+      },
+      {
+        "country_code": "CHN",
+        "medal_type": "Silver",
+        "medal_counts": 10,
+        "stack_order": 1,
+        "total_medals": 21
+      },
+      {
+        "country_code": "CHN",
+        "medal_type": "Bronze",
+        "medal_counts": 8,
+        "stack_order": 0,
+        "total_medals": 21
+      },
+      {
+        "country_code": "CHN",
+        "medal_type": "Gold",
+        "medal_counts": 3,
+        "stack_order": 2,
+        "total_medals": 21
+      },
+      {
+        "country_code": "CRO",
+        "medal_type": "Silver",
+        "medal_counts": 4,
+        "stack_order": 1,
+        "total_medals": 5
+      },
+      {
+        "country_code": "CRO",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 5
+      },
+      {
+        "country_code": "CZE",
+        "medal_type": "Silver",
+        "medal_counts": 8,
+        "stack_order": 1,
+        "total_medals": 17
+      },
+      {
+        "country_code": "CZE",
+        "medal_type": "Bronze",
+        "medal_counts": 5,
+        "stack_order": 0,
+        "total_medals": 17
+      },
+      {
+        "country_code": "CZE",
+        "medal_type": "Gold",
+        "medal_counts": 4,
+        "stack_order": 2,
+        "total_medals": 17
+      },
+      {
+        "country_code": "ESP",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 1
+      },
+      {
+        "country_code": "EST",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 2
+      },
+      {
+        "country_code": "EST",
+        "medal_type": "Silver",
+        "medal_counts": 1,
+        "stack_order": 1,
+        "total_medals": 2
+      },
+      {
+        "country_code": "EUA",
+        "medal_type": "Silver",
+        "medal_counts": 4,
+        "stack_order": 1,
+        "total_medals": 10
+      },
+      {
+        "country_code": "EUA",
+        "medal_type": "Bronze",
+        "medal_counts": 3,
+        "stack_order": 0,
+        "total_medals": 10
+      },
+      {
+        "country_code": "EUA",
+        "medal_type": "Gold",
+        "medal_counts": 3,
+        "stack_order": 2,
+        "total_medals": 10
+      },
+      {
+        "country_code": "EUN",
+        "medal_type": "Gold",
+        "medal_counts": 9,
+        "stack_order": 2,
+        "total_medals": 21
+      },
+      {
+        "country_code": "EUN",
+        "medal_type": "Bronze",
+        "medal_counts": 8,
+        "stack_order": 0,
+        "total_medals": 21
+      },
+      {
+        "country_code": "EUN",
+        "medal_type": "Silver",
+        "medal_counts": 4,
+        "stack_order": 1,
+        "total_medals": 21
+      },
+      {
+        "country_code": "FIN",
+        "medal_type": "Bronze",
+        "medal_counts": 51,
+        "stack_order": 0,
+        "total_medals": 138
+      },
+      {
+        "country_code": "FIN",
+        "medal_type": "Silver",
+        "medal_counts": 50,
+        "stack_order": 1,
+        "total_medals": 138
+      },
+      {
+        "country_code": "FIN",
+        "medal_type": "Gold",
+        "medal_counts": 37,
+        "stack_order": 2,
+        "total_medals": 138
+      },
+      {
+        "country_code": "FRA",
+        "medal_type": "Bronze",
+        "medal_counts": 35,
+        "stack_order": 0,
+        "total_medals": 77
+      },
+      {
+        "country_code": "FRA",
+        "medal_type": "Gold",
+        "medal_counts": 24,
+        "stack_order": 2,
+        "total_medals": 77
+      },
+      {
+        "country_code": "FRA",
+        "medal_type": "Silver",
+        "medal_counts": 18,
+        "stack_order": 1,
+        "total_medals": 77
+      },
+      {
+        "country_code": "FRG",
+        "medal_type": "Gold",
+        "medal_counts": 10,
+        "stack_order": 2,
+        "total_medals": 28
+      },
+      {
+        "country_code": "FRG",
+        "medal_type": "Bronze",
+        "medal_counts": 9,
+        "stack_order": 0,
+        "total_medals": 28
+      },
+      {
+        "country_code": "FRG",
+        "medal_type": "Silver",
+        "medal_counts": 9,
+        "stack_order": 1,
+        "total_medals": 28
+      },
+      {
+        "country_code": "GBR",
+        "medal_type": "Bronze",
+        "medal_counts": 6,
+        "stack_order": 0,
+        "total_medals": 14
+      },
+      {
+        "country_code": "GBR",
+        "medal_type": "Gold",
+        "medal_counts": 6,
+        "stack_order": 2,
+        "total_medals": 14
+      },
+      {
+        "country_code": "GBR",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 14
+      },
+      {
+        "country_code": "GDR",
+        "medal_type": "Gold",
+        "medal_counts": 23,
+        "stack_order": 2,
+        "total_medals": 68
+      },
+      {
+        "country_code": "GDR",
+        "medal_type": "Silver",
+        "medal_counts": 23,
+        "stack_order": 1,
+        "total_medals": 68
+      },
+      {
+        "country_code": "GDR",
+        "medal_type": "Bronze",
+        "medal_counts": 22,
+        "stack_order": 0,
+        "total_medals": 68
+      },
+      {
+        "country_code": "GER",
+        "medal_type": "Silver",
+        "medal_counts": 46,
+        "stack_order": 1,
+        "total_medals": 121
+      },
+      {
+        "country_code": "GER",
+        "medal_type": "Gold",
+        "medal_counts": 44,
+        "stack_order": 2,
+        "total_medals": 121
+      },
+      {
+        "country_code": "GER",
+        "medal_type": "Bronze",
+        "medal_counts": 31,
+        "stack_order": 0,
+        "total_medals": 121
+      },
+      {
+        "country_code": "HUN",
+        "medal_type": "Bronze",
+        "medal_counts": 4,
+        "stack_order": 0,
+        "total_medals": 6
+      },
+      {
+        "country_code": "HUN",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 6
+      },
+      {
+        "country_code": "ITA",
+        "medal_type": "Bronze",
+        "medal_counts": 32,
+        "stack_order": 0,
+        "total_medals": 88
+      },
+      {
+        "country_code": "ITA",
+        "medal_type": "Silver",
+        "medal_counts": 29,
+        "stack_order": 1,
+        "total_medals": 88
+      },
+      {
+        "country_code": "ITA",
+        "medal_type": "Gold",
+        "medal_counts": 27,
+        "stack_order": 2,
+        "total_medals": 88
+      },
+      {
+        "country_code": "JPN",
+        "medal_type": "Silver",
+        "medal_counts": 8,
+        "stack_order": 1,
+        "total_medals": 21
+      },
+      {
+        "country_code": "JPN",
+        "medal_type": "Bronze",
+        "medal_counts": 7,
+        "stack_order": 0,
+        "total_medals": 21
+      },
+      {
+        "country_code": "JPN",
+        "medal_type": "Gold",
+        "medal_counts": 6,
+        "stack_order": 2,
+        "total_medals": 21
+      },
+      {
+        "country_code": "KAZ",
+        "medal_type": "Silver",
+        "medal_counts": 3,
+        "stack_order": 1,
+        "total_medals": 5
+      },
+      {
+        "country_code": "KAZ",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 5
+      },
+      {
+        "country_code": "KAZ",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 5
+      },
+      {
+        "country_code": "KOR",
+        "medal_type": "Gold",
+        "medal_counts": 16,
+        "stack_order": 2,
+        "total_medals": 27
+      },
+      {
+        "country_code": "KOR",
+        "medal_type": "Silver",
+        "medal_counts": 9,
+        "stack_order": 1,
+        "total_medals": 27
+      },
+      {
+        "country_code": "KOR",
+        "medal_type": "Bronze",
+        "medal_counts": 2,
+        "stack_order": 0,
+        "total_medals": 27
+      },
+      {
+        "country_code": "LAT",
+        "medal_type": "Silver",
+        "medal_counts": 4,
+        "stack_order": 1,
+        "total_medals": 7
+      },
+      {
+        "country_code": "LAT",
+        "medal_type": "Bronze",
+        "medal_counts": 3,
+        "stack_order": 0,
+        "total_medals": 7
+      },
+      {
+        "country_code": "LIE",
+        "medal_type": "Bronze",
+        "medal_counts": 3,
+        "stack_order": 0,
+        "total_medals": 4
+      },
+      {
+        "country_code": "LIE",
+        "medal_type": "Silver",
+        "medal_counts": 1,
+        "stack_order": 1,
+        "total_medals": 4
+      },
+      {
+        "country_code": "LUX",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 2
+      },
+      {
+        "country_code": "NED",
+        "medal_type": "Bronze",
+        "medal_counts": 25,
+        "stack_order": 0,
+        "total_medals": 69
+      },
+      {
+        "country_code": "NED",
+        "medal_type": "Silver",
+        "medal_counts": 23,
+        "stack_order": 1,
+        "total_medals": 69
+      },
+      {
+        "country_code": "NED",
+        "medal_type": "Gold",
+        "medal_counts": 21,
+        "stack_order": 2,
+        "total_medals": 69
+      },
+      {
+        "country_code": "NOR",
+        "medal_type": "Silver",
+        "medal_counts": 97,
+        "stack_order": 1,
+        "total_medals": 269
+      },
+      {
+        "country_code": "NOR",
+        "medal_type": "Gold",
+        "medal_counts": 96,
+        "stack_order": 2,
+        "total_medals": 269
+      },
+      {
+        "country_code": "NOR",
+        "medal_type": "Bronze",
+        "medal_counts": 76,
+        "stack_order": 0,
+        "total_medals": 269
+      },
+      {
+        "country_code": "POL",
+        "medal_type": "Silver",
+        "medal_counts": 5,
+        "stack_order": 1,
+        "total_medals": 13
+      },
+      {
+        "country_code": "POL",
+        "medal_type": "Bronze",
+        "medal_counts": 4,
+        "stack_order": 0,
+        "total_medals": 13
+      },
+      {
+        "country_code": "POL",
+        "medal_type": "Gold",
+        "medal_counts": 4,
+        "stack_order": 2,
+        "total_medals": 13
+      },
+      {
+        "country_code": "PRK",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 2
+      },
+      {
+        "country_code": "PRK",
+        "medal_type": "Silver",
+        "medal_counts": 1,
+        "stack_order": 1,
+        "total_medals": 2
+      },
+      {
+        "country_code": "ROU",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 1
+      },
+      {
+        "country_code": "RUS",
+        "medal_type": "Gold",
+        "medal_counts": 41,
+        "stack_order": 2,
+        "total_medals": 94
+      },
+      {
+        "country_code": "RUS",
+        "medal_type": "Silver",
+        "medal_counts": 29,
+        "stack_order": 1,
+        "total_medals": 94
+      },
+      {
+        "country_code": "RUS",
+        "medal_type": "Bronze",
+        "medal_counts": 24,
+        "stack_order": 0,
+        "total_medals": 94
+      },
+      {
+        "country_code": "SLO",
+        "medal_type": "Bronze",
+        "medal_counts": 5,
+        "stack_order": 0,
+        "total_medals": 7
+      },
+      {
+        "country_code": "SLO",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 7
+      },
+      {
+        "country_code": "SUI",
+        "medal_type": "Bronze",
+        "medal_counts": 35,
+        "stack_order": 0,
+        "total_medals": 92
+      },
+      {
+        "country_code": "SUI",
+        "medal_type": "Gold",
+        "medal_counts": 31,
+        "stack_order": 2,
+        "total_medals": 92
+      },
+      {
+        "country_code": "SUI",
+        "medal_type": "Silver",
+        "medal_counts": 26,
+        "stack_order": 1,
+        "total_medals": 92
+      },
+      {
+        "country_code": "SVK",
+        "medal_type": "Gold",
+        "medal_counts": 2,
+        "stack_order": 2,
+        "total_medals": 5
+      },
+      {
+        "country_code": "SVK",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 5
+      },
+      {
+        "country_code": "SVK",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 5
+      },
+      {
+        "country_code": "SWE",
+        "medal_type": "Gold",
+        "medal_counts": 42,
+        "stack_order": 2,
+        "total_medals": 113
+      },
+      {
+        "country_code": "SWE",
+        "medal_type": "Bronze",
+        "medal_counts": 40,
+        "stack_order": 0,
+        "total_medals": 113
+      },
+      {
+        "country_code": "SWE",
+        "medal_type": "Silver",
+        "medal_counts": 31,
+        "stack_order": 1,
+        "total_medals": 113
+      },
+      {
+        "country_code": "TCH",
+        "medal_type": "Bronze",
+        "medal_counts": 13,
+        "stack_order": 0,
+        "total_medals": 23
+      },
+      {
+        "country_code": "TCH",
+        "medal_type": "Silver",
+        "medal_counts": 8,
+        "stack_order": 1,
+        "total_medals": 23
+      },
+      {
+        "country_code": "TCH",
+        "medal_type": "Gold",
+        "medal_counts": 2,
+        "stack_order": 2,
+        "total_medals": 23
+      },
+      {
+        "country_code": "UKR",
+        "medal_type": "Bronze",
+        "medal_counts": 4,
+        "stack_order": 0,
+        "total_medals": 6
+      },
+      {
+        "country_code": "UKR",
+        "medal_type": "Gold",
+        "medal_counts": 1,
+        "stack_order": 2,
+        "total_medals": 6
+      },
+      {
+        "country_code": "UKR",
+        "medal_type": "Silver",
+        "medal_counts": 1,
+        "stack_order": 1,
+        "total_medals": 6
+      },
+      {
+        "country_code": "URS",
+        "medal_type": "Gold",
+        "medal_counts": 66,
+        "stack_order": 2,
+        "total_medals": 156
+      },
+      {
+        "country_code": "URS",
+        "medal_type": "Silver",
+        "medal_counts": 46,
+        "stack_order": 1,
+        "total_medals": 156
+      },
+      {
+        "country_code": "URS",
+        "medal_type": "Bronze",
+        "medal_counts": 44,
+        "stack_order": 0,
+        "total_medals": 156
+      },
+      {
+        "country_code": "USA",
+        "medal_type": "Silver",
+        "medal_counts": 56,
+        "stack_order": 1,
+        "total_medals": 155
+      },
+      {
+        "country_code": "USA",
+        "medal_type": "Gold",
+        "medal_counts": 50,
+        "stack_order": 2,
+        "total_medals": 155
+      },
+      {
+        "country_code": "USA",
+        "medal_type": "Bronze",
+        "medal_counts": 49,
+        "stack_order": 0,
+        "total_medals": 155
+      },
+      {
+        "country_code": "YUG",
+        "medal_type": "Silver",
+        "medal_counts": 2,
+        "stack_order": 1,
+        "total_medals": 3
+      },
+      {
+        "country_code": "YUG",
+        "medal_type": "Bronze",
+        "medal_counts": 1,
+        "stack_order": 0,
+        "total_medals": 3
+      }
+    ]
+  }
+}

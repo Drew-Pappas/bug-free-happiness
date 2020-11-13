@@ -1,0 +1,950 @@
+{
+  "config": {
+    "view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0},
+    "axis": {"labelFontSize": 14, "titleFontSize": 16},
+    "legend": {"gradientLength": 200, "gradientThickness": 30, "orient": "none"}
+  },
+  "layer": [
+    {
+      "data": {"name": "data-654eb691a85eb2b5b71d7c1d785d6a7c"},
+      "mark": {
+        "type": "line",
+        "color": "red",
+        "point": {"filled": false, "fillOpacity": 0, "size": 600},
+        "strokeDash": [5, 5]
+      },
+      "encoding": {
+        "detail": {"type": "nominal", "field": "country_code"},
+        "opacity": {
+          "condition": {"value": 1, "selection": "selector001"},
+          "value": 0
+        },
+        "x": {"type": "quantitative", "field": "mean_hdi"},
+        "y": {"type": "quantitative", "field": "total_medals"}
+      }
+    },
+    {
+      "data": {"name": "data-7bdb2f85878fdccc596be84ed5d84a74"},
+      "mark": {"type": "circle", "size": 600},
+      "encoding": {
+        "color": {
+          "type": "quantitative",
+          "field": "gdp_per_capita",
+          "legend": {"title": "GDP Per Capita"}
+        },
+        "x": {
+          "type": "quantitative",
+          "axis": {"grid": false, "title": "Average HDI Score"},
+          "field": "mean_hdi",
+          "scale": {"domain": [0.62, 0.94], "zero": false}
+        },
+        "y": {
+          "type": "quantitative",
+          "axis": {"grid": false, "orient": "right", "title": null},
+          "field": "total_medals",
+          "scale": {"padding": 3}
+        }
+      }
+    },
+    {
+      "data": {"name": "data-7bdb2f85878fdccc596be84ed5d84a74"},
+      "mark": {"type": "text", "size": 10},
+      "encoding": {
+        "text": {"type": "nominal", "field": "country_code"},
+        "x": {
+          "type": "quantitative",
+          "axis": {"grid": false, "title": "Average HDI Score"},
+          "field": "mean_hdi",
+          "scale": {"domain": [0.62, 0.94], "zero": false}
+        },
+        "y": {
+          "type": "quantitative",
+          "axis": {"grid": false, "orient": "right", "title": null},
+          "field": "total_medals",
+          "scale": {"padding": 3}
+        }
+      },
+      "selection": {
+        "selector001": {
+          "type": "single",
+          "fields": ["country_code"],
+          "on": "click",
+          "empty": "none"
+        }
+      }
+    },
+    {
+      "data": {"name": "data-f258d39d44ba29155beec738e02c6dc0"},
+      "mark": {"type": "text", "dx": -50, "dy": -50, "size": 15},
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 1, "selection": "selector001"},
+          "value": 0
+        },
+        "text": {"type": "nominal", "field": "slope"},
+        "x": {"type": "quantitative", "field": "mean_hdi"},
+        "y": {"type": "quantitative", "field": "total_medals"}
+      }
+    }
+  ],
+  "encoding": {
+    "tooltip": [
+      {"type": "nominal", "field": "country_code"},
+      {"type": "quantitative", "field": "mean_hdi"},
+      {"type": "quantitative", "field": "total_medals"},
+      {"type": "quantitative", "field": "gdp_per_capita"}
+    ]
+  },
+  "height": 600,
+  "resolve": {"scale": {"color": "shared"}},
+  "width": 850,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-654eb691a85eb2b5b71d7c1d785d6a7c": [
+      {
+        "country_code": "AUS",
+        "mean_medals": 1,
+        "mean_hdi": 0.903173913043478,
+        "population": 23781169,
+        "gdp_per_capita": 56310.9629933721,
+        "total_medals": 5,
+        "slope": 0.000055171277997367026,
+        "coordinates": "(0.9031739130434779, 5)"
+      },
+      {
+        "country_code": "AUS",
+        "mean_medals": 1,
+        "mean_hdi": 0.9177391304347828,
+        "population": 23781169,
+        "gdp_per_capita": 56310.9629933721,
+        "total_medals": 269,
+        "slope": 0.000055171277997367026,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "AUT",
+        "mean_medals": 6.636363636363638,
+        "mean_hdi": 0.8531304347826089,
+        "population": 8611088,
+        "gdp_per_capita": 43774.985173612,
+        "total_medals": 146,
+        "slope": 0.0005252739483916583,
+        "coordinates": "(0.8531304347826089, 146)"
+      },
+      {
+        "country_code": "AUT",
+        "mean_medals": 6.636363636363638,
+        "mean_hdi": 0.9177391304347828,
+        "population": 8611088,
+        "gdp_per_capita": 43774.985173612,
+        "total_medals": 269,
+        "slope": 0.0005252739483916583,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "BEL",
+        "mean_medals": 1.3333333333333333,
+        "mean_hdi": 0.8790869565217392,
+        "population": 11285721,
+        "gdp_per_capita": 40324.0277657215,
+        "total_medals": 4,
+        "slope": 0.0001458572600492213,
+        "coordinates": "(0.8790869565217392, 4)"
+      },
+      {
+        "country_code": "BEL",
+        "mean_medals": 1.3333333333333333,
+        "mean_hdi": 0.9177391304347828,
+        "population": 11285721,
+        "gdp_per_capita": 40324.0277657215,
+        "total_medals": 269,
+        "slope": 0.0001458572600492213,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "BLR",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.7303000000000002,
+        "population": 9513000,
+        "gdp_per_capita": 5740.456494795621,
+        "total_medals": 13,
+        "slope": 0.0007321841032608698,
+        "coordinates": "(0.7303000000000002, 13)"
+      },
+      {
+        "country_code": "BLR",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.9177391304347828,
+        "population": 9513000,
+        "gdp_per_capita": 5740.456494795621,
+        "total_medals": 269,
+        "slope": 0.0007321841032608698,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "CAN",
+        "mean_medals": 4.857142857142857,
+        "mean_hdi": 0.8806521739130436,
+        "population": 35851774,
+        "gdp_per_capita": 43248.529909341,
+        "total_medals": 102,
+        "slope": 0.00022207758396251026,
+        "coordinates": "(0.8806521739130436, 102)"
+      },
+      {
+        "country_code": "CAN",
+        "mean_medals": 4.857142857142857,
+        "mean_hdi": 0.9177391304347828,
+        "population": 35851774,
+        "gdp_per_capita": 43248.529909341,
+        "total_medals": 269,
+        "slope": 0.00022207758396251026,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "CHN",
+        "mean_medals": 3.5,
+        "mean_hdi": 0.626304347826087,
+        "population": 1371220000,
+        "gdp_per_capita": 8027.683810139069,
+        "total_medals": 21,
+        "slope": 0.0011751402524544186,
+        "coordinates": "(0.626304347826087, 21)"
+      },
+      {
+        "country_code": "CHN",
+        "mean_medals": 3.5,
+        "mean_hdi": 0.9177391304347828,
+        "population": 1371220000,
+        "gdp_per_capita": 8027.683810139069,
+        "total_medals": 269,
+        "slope": 0.0011751402524544186,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "CZE",
+        "mean_medals": 3.4,
+        "mean_hdi": 0.8133043478260867,
+        "population": 10551219,
+        "gdp_per_capita": 17548.3382129701,
+        "total_medals": 17,
+        "slope": 0.00041442374051069885,
+        "coordinates": "(0.8133043478260867, 17)"
+      },
+      {
+        "country_code": "CZE",
+        "mean_medals": 3.4,
+        "mean_hdi": 0.9177391304347828,
+        "population": 10551219,
+        "gdp_per_capita": 17548.3382129701,
+        "total_medals": 269,
+        "slope": 0.00041442374051069885,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "ESP",
+        "mean_medals": 1,
+        "mean_hdi": 0.8334347826086956,
+        "population": 46418269,
+        "gdp_per_capita": 25831.5823052954,
+        "total_medals": 1,
+        "slope": 0.0003145684620376388,
+        "coordinates": "(0.8334347826086956, 1)"
+      },
+      {
+        "country_code": "ESP",
+        "mean_medals": 1,
+        "mean_hdi": 0.9177391304347828,
+        "population": 46418269,
+        "gdp_per_capita": 25831.5823052954,
+        "total_medals": 269,
+        "slope": 0.0003145684620376388,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "EST",
+        "mean_medals": 1,
+        "mean_hdi": 0.7963478260869563,
+        "population": 1311998,
+        "gdp_per_capita": 17118.5042003236,
+        "total_medals": 2,
+        "slope": 0.00045464907995440643,
+        "coordinates": "(0.7963478260869563, 2)"
+      },
+      {
+        "country_code": "EST",
+        "mean_medals": 1,
+        "mean_hdi": 0.9177391304347828,
+        "population": 1311998,
+        "gdp_per_capita": 17118.5042003236,
+        "total_medals": 269,
+        "slope": 0.00045464907995440643,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "FIN",
+        "mean_medals": 6.2727272727272725,
+        "mean_hdi": 0.8679130434782608,
+        "population": 5482013,
+        "gdp_per_capita": 42311.0362306446,
+        "total_medals": 138,
+        "slope": 0.0003803518088284124,
+        "coordinates": "(0.8679130434782608, 138)"
+      },
+      {
+        "country_code": "FIN",
+        "mean_medals": 6.2727272727272725,
+        "mean_hdi": 0.9177391304347828,
+        "population": 5482013,
+        "gdp_per_capita": 42311.0362306446,
+        "total_medals": 269,
+        "slope": 0.0003803518088284124,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "FRA",
+        "mean_medals": 4.277777777777779,
+        "mean_hdi": 0.8499565217391306,
+        "population": 66808385,
+        "gdp_per_capita": 36205.5681017036,
+        "total_medals": 77,
+        "slope": 0.00035303442028985534,
+        "coordinates": "(0.8499565217391306, 77)"
+      },
+      {
+        "country_code": "FRA",
+        "mean_medals": 4.277777777777779,
+        "mean_hdi": 0.9177391304347828,
+        "population": 66808385,
+        "gdp_per_capita": 36205.5681017036,
+        "total_medals": 269,
+        "slope": 0.00035303442028985534,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "GBR",
+        "mean_medals": 1.4,
+        "mean_hdi": 0.8723478260869567,
+        "population": 65138232,
+        "gdp_per_capita": 43875.9696143686,
+        "total_medals": 14,
+        "slope": 0.00017800511508951419,
+        "coordinates": "(0.8723478260869567, 14)"
+      },
+      {
+        "country_code": "GBR",
+        "mean_medals": 1.4,
+        "mean_hdi": 0.9177391304347828,
+        "population": 65138232,
+        "gdp_per_capita": 43875.9696143686,
+        "total_medals": 269,
+        "slope": 0.00017800511508951419,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "ITA",
+        "mean_medals": 5.176470588235294,
+        "mean_hdi": 0.8399565217391304,
+        "population": 60802085,
+        "gdp_per_capita": 29957.804315437203,
+        "total_medals": 88,
+        "slope": 0.00042973816958924,
+        "coordinates": "(0.8399565217391304, 88)"
+      },
+      {
+        "country_code": "ITA",
+        "mean_medals": 5.176470588235294,
+        "mean_hdi": 0.9177391304347828,
+        "population": 60802085,
+        "gdp_per_capita": 29957.804315437203,
+        "total_medals": 269,
+        "slope": 0.00042973816958924,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "JPN",
+        "mean_medals": 2.625,
+        "mean_hdi": 0.8649130434782609,
+        "population": 126958472,
+        "gdp_per_capita": 32477.215144923397,
+        "total_medals": 21,
+        "slope": 0.00021300841514726578,
+        "coordinates": "(0.8649130434782609, 21)"
+      },
+      {
+        "country_code": "JPN",
+        "mean_medals": 2.625,
+        "mean_hdi": 0.9177391304347828,
+        "population": 126958472,
+        "gdp_per_capita": 32477.215144923397,
+        "total_medals": 269,
+        "slope": 0.00021300841514726578,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "KAZ",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.7224347826086956,
+        "population": 17544126,
+        "gdp_per_capita": 10509.9810699442,
+        "total_medals": 5,
+        "slope": 0.0007397891963109362,
+        "coordinates": "(0.7224347826086956, 5)"
+      },
+      {
+        "country_code": "KAZ",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.9177391304347828,
+        "population": 17544126,
+        "gdp_per_capita": 10509.9810699442,
+        "total_medals": 269,
+        "slope": 0.0007397891963109362,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "KOR",
+        "mean_medals": 3.8571428571428568,
+        "mean_hdi": 0.8338695652173914,
+        "population": 50617045,
+        "gdp_per_capita": 27221.524050966094,
+        "total_medals": 27,
+        "slope": 0.0003465684513115348,
+        "coordinates": "(0.8338695652173914, 27)"
+      },
+      {
+        "country_code": "KOR",
+        "mean_medals": 3.8571428571428568,
+        "mean_hdi": 0.9177391304347828,
+        "population": 50617045,
+        "gdp_per_capita": 27221.524050966094,
+        "total_medals": 269,
+        "slope": 0.0003465684513115348,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "LUX",
+        "mean_medals": 2,
+        "mean_hdi": 0.8622173913043478,
+        "population": 569676,
+        "gdp_per_capita": 101449.96816804199,
+        "total_medals": 2,
+        "slope": 0.0002079465885035019,
+        "coordinates": "(0.8622173913043478, 2)"
+      },
+      {
+        "country_code": "LUX",
+        "mean_medals": 2,
+        "mean_hdi": 0.9177391304347828,
+        "population": 569676,
+        "gdp_per_capita": 101449.96816804199,
+        "total_medals": 269,
+        "slope": 0.0002079465885035019,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "NOR",
+        "mean_medals": 12.227272727272727,
+        "mean_hdi": 0.9177391304347828,
+        "population": 5195921,
+        "gdp_per_capita": 74400.3697770928,
+        "total_medals": 269,
+        "slope": 0,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "NOR",
+        "mean_medals": 12.227272727272727,
+        "mean_hdi": 0.9177391304347828,
+        "population": 5195921,
+        "gdp_per_capita": 74400.3697770928,
+        "total_medals": 269,
+        "slope": 0,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "POL",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.793695652173913,
+        "population": 37999494,
+        "gdp_per_capita": 12554.547553631299,
+        "total_medals": 13,
+        "slope": 0.00048454483695652264,
+        "coordinates": "(0.793695652173913, 13)"
+      },
+      {
+        "country_code": "POL",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.9177391304347828,
+        "population": 37999494,
+        "gdp_per_capita": 12554.547553631299,
+        "total_medals": 269,
+        "slope": 0.00048454483695652264,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "RUS",
+        "mean_medals": 15.666666666666664,
+        "mean_hdi": 0.7442608695652175,
+        "population": 144096812,
+        "gdp_per_capita": 9092.580536068841,
+        "total_medals": 94,
+        "slope": 0.0009913043478260877,
+        "coordinates": "(0.7442608695652175, 94)"
+      },
+      {
+        "country_code": "RUS",
+        "mean_medals": 15.666666666666664,
+        "mean_hdi": 0.9177391304347828,
+        "population": 144096812,
+        "gdp_per_capita": 9092.580536068841,
+        "total_medals": 269,
+        "slope": 0.0009913043478260877,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "SVK",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.7874347826086957,
+        "population": 5424050,
+        "gdp_per_capita": 16088.2775872723,
+        "total_medals": 5,
+        "slope": 0.0004935770750988149,
+        "coordinates": "(0.7874347826086957, 5)"
+      },
+      {
+        "country_code": "SVK",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.9177391304347828,
+        "population": 5424050,
+        "gdp_per_capita": 16088.2775872723,
+        "total_medals": 269,
+        "slope": 0.0004935770750988149,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "SWE",
+        "mean_medals": 5.136363636363637,
+        "mean_hdi": 0.8900869565217391,
+        "population": 9798871,
+        "gdp_per_capita": 50579.673648677686,
+        "total_medals": 113,
+        "slope": 0.00017725752508361382,
+        "coordinates": "(0.8900869565217391, 113)"
+      },
+      {
+        "country_code": "SWE",
+        "mean_medals": 5.136363636363637,
+        "mean_hdi": 0.9177391304347828,
+        "population": 9798871,
+        "gdp_per_capita": 50579.673648677686,
+        "total_medals": 269,
+        "slope": 0.00017725752508361382,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "UKR",
+        "mean_medals": 1.5,
+        "mean_hdi": 0.7015217391304347,
+        "population": 45198200,
+        "gdp_per_capita": 2114.95471628444,
+        "total_medals": 6,
+        "slope": 0.0008221193585716659,
+        "coordinates": "(0.7015217391304347, 6)"
+      },
+      {
+        "country_code": "UKR",
+        "mean_medals": 1.5,
+        "mean_hdi": 0.9177391304347828,
+        "population": 45198200,
+        "gdp_per_capita": 2114.95471628444,
+        "total_medals": 269,
+        "slope": 0.0008221193585716659,
+        "coordinates": "(0.9177391304347828, 269)"
+      },
+      {
+        "country_code": "USA",
+        "mean_medals": 7.045454545454546,
+        "mean_hdi": 0.8946190476190476,
+        "population": 321418820,
+        "gdp_per_capita": 56115.7184261955,
+        "total_medals": 155,
+        "slope": 0.00020280774399767708,
+        "coordinates": "(0.8946190476190476, 155)"
+      },
+      {
+        "country_code": "USA",
+        "mean_medals": 7.045454545454546,
+        "mean_hdi": 0.9177391304347828,
+        "population": 321418820,
+        "gdp_per_capita": 56115.7184261955,
+        "total_medals": 269,
+        "slope": 0.00020280774399767708,
+        "coordinates": "(0.9177391304347828, 269)"
+      }
+    ],
+    "data-7bdb2f85878fdccc596be84ed5d84a74": [
+      {
+        "country_code": "AUS",
+        "mean_medals": 1,
+        "mean_hdi": 0.903173913043478,
+        "population": 23781169,
+        "gdp_per_capita": 56310.9629933721,
+        "total_medals": 5
+      },
+      {
+        "country_code": "AUT",
+        "mean_medals": 6.636363636363638,
+        "mean_hdi": 0.8531304347826089,
+        "population": 8611088,
+        "gdp_per_capita": 43774.985173612,
+        "total_medals": 146
+      },
+      {
+        "country_code": "BEL",
+        "mean_medals": 1.3333333333333333,
+        "mean_hdi": 0.8790869565217392,
+        "population": 11285721,
+        "gdp_per_capita": 40324.0277657215,
+        "total_medals": 4
+      },
+      {
+        "country_code": "BLR",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.7303000000000002,
+        "population": 9513000,
+        "gdp_per_capita": 5740.456494795621,
+        "total_medals": 13
+      },
+      {
+        "country_code": "CAN",
+        "mean_medals": 4.857142857142857,
+        "mean_hdi": 0.8806521739130436,
+        "population": 35851774,
+        "gdp_per_capita": 43248.529909341,
+        "total_medals": 102
+      },
+      {
+        "country_code": "CHN",
+        "mean_medals": 3.5,
+        "mean_hdi": 0.626304347826087,
+        "population": 1371220000,
+        "gdp_per_capita": 8027.683810139069,
+        "total_medals": 21
+      },
+      {
+        "country_code": "CZE",
+        "mean_medals": 3.4,
+        "mean_hdi": 0.8133043478260867,
+        "population": 10551219,
+        "gdp_per_capita": 17548.3382129701,
+        "total_medals": 17
+      },
+      {
+        "country_code": "ESP",
+        "mean_medals": 1,
+        "mean_hdi": 0.8334347826086956,
+        "population": 46418269,
+        "gdp_per_capita": 25831.5823052954,
+        "total_medals": 1
+      },
+      {
+        "country_code": "EST",
+        "mean_medals": 1,
+        "mean_hdi": 0.7963478260869563,
+        "population": 1311998,
+        "gdp_per_capita": 17118.5042003236,
+        "total_medals": 2
+      },
+      {
+        "country_code": "FIN",
+        "mean_medals": 6.2727272727272725,
+        "mean_hdi": 0.8679130434782608,
+        "population": 5482013,
+        "gdp_per_capita": 42311.0362306446,
+        "total_medals": 138
+      },
+      {
+        "country_code": "FRA",
+        "mean_medals": 4.277777777777779,
+        "mean_hdi": 0.8499565217391306,
+        "population": 66808385,
+        "gdp_per_capita": 36205.5681017036,
+        "total_medals": 77
+      },
+      {
+        "country_code": "GBR",
+        "mean_medals": 1.4,
+        "mean_hdi": 0.8723478260869567,
+        "population": 65138232,
+        "gdp_per_capita": 43875.9696143686,
+        "total_medals": 14
+      },
+      {
+        "country_code": "ITA",
+        "mean_medals": 5.176470588235294,
+        "mean_hdi": 0.8399565217391304,
+        "population": 60802085,
+        "gdp_per_capita": 29957.804315437203,
+        "total_medals": 88
+      },
+      {
+        "country_code": "JPN",
+        "mean_medals": 2.625,
+        "mean_hdi": 0.8649130434782609,
+        "population": 126958472,
+        "gdp_per_capita": 32477.215144923397,
+        "total_medals": 21
+      },
+      {
+        "country_code": "KAZ",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.7224347826086956,
+        "population": 17544126,
+        "gdp_per_capita": 10509.9810699442,
+        "total_medals": 5
+      },
+      {
+        "country_code": "KOR",
+        "mean_medals": 3.8571428571428568,
+        "mean_hdi": 0.8338695652173914,
+        "population": 50617045,
+        "gdp_per_capita": 27221.524050966094,
+        "total_medals": 27
+      },
+      {
+        "country_code": "LUX",
+        "mean_medals": 2,
+        "mean_hdi": 0.8622173913043478,
+        "population": 569676,
+        "gdp_per_capita": 101449.96816804199,
+        "total_medals": 2
+      },
+      {
+        "country_code": "NOR",
+        "mean_medals": 12.227272727272727,
+        "mean_hdi": 0.9177391304347828,
+        "population": 5195921,
+        "gdp_per_capita": 74400.3697770928,
+        "total_medals": 269
+      },
+      {
+        "country_code": "POL",
+        "mean_medals": 2.1666666666666665,
+        "mean_hdi": 0.793695652173913,
+        "population": 37999494,
+        "gdp_per_capita": 12554.547553631299,
+        "total_medals": 13
+      },
+      {
+        "country_code": "RUS",
+        "mean_medals": 15.666666666666664,
+        "mean_hdi": 0.7442608695652175,
+        "population": 144096812,
+        "gdp_per_capita": 9092.580536068841,
+        "total_medals": 94
+      },
+      {
+        "country_code": "SVK",
+        "mean_medals": 1.6666666666666667,
+        "mean_hdi": 0.7874347826086957,
+        "population": 5424050,
+        "gdp_per_capita": 16088.2775872723,
+        "total_medals": 5
+      },
+      {
+        "country_code": "SWE",
+        "mean_medals": 5.136363636363637,
+        "mean_hdi": 0.8900869565217391,
+        "population": 9798871,
+        "gdp_per_capita": 50579.673648677686,
+        "total_medals": 113
+      },
+      {
+        "country_code": "UKR",
+        "mean_medals": 1.5,
+        "mean_hdi": 0.7015217391304347,
+        "population": 45198200,
+        "gdp_per_capita": 2114.95471628444,
+        "total_medals": 6
+      },
+      {
+        "country_code": "USA",
+        "mean_medals": 7.045454545454546,
+        "mean_hdi": 0.8946190476190476,
+        "population": 321418820,
+        "gdp_per_capita": 56115.7184261955,
+        "total_medals": 155
+      }
+    ],
+    "data-f258d39d44ba29155beec738e02c6dc0": [
+      {
+        "country_code": "AUS",
+        "coordinates": "(0.9031739130434779, 5)",
+        "mean_hdi": 0.9104565217391304,
+        "total_medals": 137,
+        "slope": "Slope: 5.5e-05"
+      },
+      {
+        "country_code": "AUT",
+        "coordinates": "(0.8531304347826089, 146)",
+        "mean_hdi": 0.8854347826086959,
+        "total_medals": 207.5,
+        "slope": "Slope: 0.000525"
+      },
+      {
+        "country_code": "BEL",
+        "coordinates": "(0.8790869565217392, 4)",
+        "mean_hdi": 0.8984130434782609,
+        "total_medals": 136.5,
+        "slope": "Slope: 0.000146"
+      },
+      {
+        "country_code": "BLR",
+        "coordinates": "(0.7303000000000002, 13)",
+        "mean_hdi": 0.8240195652173915,
+        "total_medals": 141,
+        "slope": "Slope: 0.000732"
+      },
+      {
+        "country_code": "CAN",
+        "coordinates": "(0.8806521739130436, 102)",
+        "mean_hdi": 0.8991956521739133,
+        "total_medals": 185.5,
+        "slope": "Slope: 0.000222"
+      },
+      {
+        "country_code": "CHN",
+        "coordinates": "(0.626304347826087, 21)",
+        "mean_hdi": 0.7720217391304349,
+        "total_medals": 145,
+        "slope": "Slope: 0.001175"
+      },
+      {
+        "country_code": "CZE",
+        "coordinates": "(0.8133043478260867, 17)",
+        "mean_hdi": 0.8655217391304348,
+        "total_medals": 143,
+        "slope": "Slope: 0.000414"
+      },
+      {
+        "country_code": "ESP",
+        "coordinates": "(0.8334347826086956, 1)",
+        "mean_hdi": 0.8755869565217392,
+        "total_medals": 135,
+        "slope": "Slope: 0.000315"
+      },
+      {
+        "country_code": "EST",
+        "coordinates": "(0.7963478260869563, 2)",
+        "mean_hdi": 0.8570434782608696,
+        "total_medals": 135.5,
+        "slope": "Slope: 0.000455"
+      },
+      {
+        "country_code": "FIN",
+        "coordinates": "(0.8679130434782608, 138)",
+        "mean_hdi": 0.8928260869565219,
+        "total_medals": 203.5,
+        "slope": "Slope: 0.00038"
+      },
+      {
+        "country_code": "FRA",
+        "coordinates": "(0.8499565217391306, 77)",
+        "mean_hdi": 0.8838478260869567,
+        "total_medals": 173,
+        "slope": "Slope: 0.000353"
+      },
+      {
+        "country_code": "GBR",
+        "coordinates": "(0.8723478260869567, 14)",
+        "mean_hdi": 0.8950434782608698,
+        "total_medals": 141.5,
+        "slope": "Slope: 0.000178"
+      },
+      {
+        "country_code": "ITA",
+        "coordinates": "(0.8399565217391304, 88)",
+        "mean_hdi": 0.8788478260869566,
+        "total_medals": 178.5,
+        "slope": "Slope: 0.00043"
+      },
+      {
+        "country_code": "JPN",
+        "coordinates": "(0.8649130434782609, 21)",
+        "mean_hdi": 0.8913260869565218,
+        "total_medals": 145,
+        "slope": "Slope: 0.000213"
+      },
+      {
+        "country_code": "KAZ",
+        "coordinates": "(0.7224347826086956, 5)",
+        "mean_hdi": 0.8200869565217392,
+        "total_medals": 137,
+        "slope": "Slope: 0.00074"
+      },
+      {
+        "country_code": "KOR",
+        "coordinates": "(0.8338695652173914, 27)",
+        "mean_hdi": 0.8758043478260871,
+        "total_medals": 148,
+        "slope": "Slope: 0.000347"
+      },
+      {
+        "country_code": "LUX",
+        "coordinates": "(0.8622173913043478, 2)",
+        "mean_hdi": 0.8899782608695653,
+        "total_medals": 135.5,
+        "slope": "Slope: 0.000208"
+      },
+      {
+        "country_code": "NOR",
+        "coordinates": "(0.9177391304347828, 269)",
+        "mean_hdi": 0.9177391304347828,
+        "total_medals": 269,
+        "slope": "Slope: 0.0"
+      },
+      {
+        "country_code": "POL",
+        "coordinates": "(0.793695652173913, 13)",
+        "mean_hdi": 0.8557173913043479,
+        "total_medals": 141,
+        "slope": "Slope: 0.000485"
+      },
+      {
+        "country_code": "RUS",
+        "coordinates": "(0.7442608695652175, 94)",
+        "mean_hdi": 0.8310000000000002,
+        "total_medals": 181.5,
+        "slope": "Slope: 0.000991"
+      },
+      {
+        "country_code": "SVK",
+        "coordinates": "(0.7874347826086957, 5)",
+        "mean_hdi": 0.8525869565217392,
+        "total_medals": 137,
+        "slope": "Slope: 0.000494"
+      },
+      {
+        "country_code": "SWE",
+        "coordinates": "(0.8900869565217391, 113)",
+        "mean_hdi": 0.903913043478261,
+        "total_medals": 191,
+        "slope": "Slope: 0.000177"
+      },
+      {
+        "country_code": "UKR",
+        "coordinates": "(0.7015217391304347, 6)",
+        "mean_hdi": 0.8096304347826088,
+        "total_medals": 137.5,
+        "slope": "Slope: 0.000822"
+      },
+      {
+        "country_code": "USA",
+        "coordinates": "(0.8946190476190476, 155)",
+        "mean_hdi": 0.9061790890269152,
+        "total_medals": 212,
+        "slope": "Slope: 0.000203"
+      }
+    ]
+  }
+}

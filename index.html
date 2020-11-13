@@ -2,20 +2,57 @@
 <html>
   <head>
     <title>Embedding Vega-Lite</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
   </head>
   <body>
-    <div id="vis"></div>
+    <h1>Norway: A Powerhouse in the North</h1>
+
+    <main>
+      <div class ='vis_container'>
+        <p class = 'vis_text'>Norway's combined medal count is higher than any other nation's. </p>
+        <div id="vis1" class = 'visualization_button' onclick=display_vis(this)>Visualization1</div>
+      </div>
+
+      <div class ='vis_container'>
+        <p class = 'vis_text'>Despite being a country with a population lower than the state of Wisconsins', Norway consistently manages to win more medals than other countries.</p>
+        <div id="vis2" class = 'visualization_button' onclick=display_vis(this)>Visualization2</div>
+      </div>
+    
+      <div class ='vis_container'>
+        <p class = 'vis_text'>Norway has the second highest number of facilities for winter sports in the world, second only to Russia. However, Russia has a population of 144.5 million compared to Norway's 5.3 million. With 73 facilities, Norway has a ratio of rinks to people of 71 thousand to 1, compared to Russia's 1.8 million to 1. The average Norwegian has a lot of opportunity to practice.</p>
+        <div id="vis3" class = 'visualization_button' onclick=display_vis(this)>Visualization3</div>
+      </div>
+
+      <div class ='vis_container'>
+        <p class = 'vis_text'>Norway's success stems primarily from their wealth and quality of life for their citizens. Norway has the second highest GDP per capita and highest average score on the UN's Human Development Index, which measures education, wealth, and life expectancy across a nation. Clicking on any nation will reveal the slope of the line from their country to Norway. The slope represents the number of HDI points per medal they would need to earn to be where Norway is today.</p>
+        <div id="vis4" class = 'visualization_button' onclick=display_vis(this)>Visualization4</div>
+      </div>
+      
+
+    </main>
+
     <script>
-        vegaEmbed(
-          '#vis',
-          'visualizations/display_vis1.json'
-        );
+      function display_vis(vis){
+        var visTag= '#' + vis.id;
+        var visualizations = {
+          'vis1':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis1.json',
+          'vis2':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis2.json',
+          'vis3':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis3.json',
+          'vis4':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis4.json',
+        }
+        console.log('ran');
+        vegaEmbed(visTag,visualizations[vis.id]);
+
+        vis.onclick = undefined;
+        vis.classList.remove("visualization_button");
+        vis.classList.add("visualization_expanded");
+
+      }
       </script>
-
-
 
   </body>
 </html>

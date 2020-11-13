@@ -28,7 +28,7 @@
             }
           },
           "selection": {
-            "selector008": {
+            "selector044": {
               "type": "single",
               "fields": ["country_code"],
               "init": {"country_code": "USA"},
@@ -82,7 +82,7 @@
               }
             }
           },
-          "transform": [{"filter": {"selection": "selector008"}}]
+          "transform": [{"filter": {"selection": "selector044"}}]
         },
         {
           "mark": {"type": "line", "point": true},
@@ -100,7 +100,7 @@
               "field": "medal"
             }
           },
-          "selection": {"selector011": {"type": "single"}},
+          "selection": {"selector047": {"type": "single"}},
           "transform": [{"filter": "(datum.country_code === 'NOR')"}]
         },
         {
@@ -135,7 +135,7 @@
           }
         },
         "opacity": {
-          "condition": {"value": 1, "selection": "selector010"},
+          "condition": {"value": 1, "selection": "selector046"},
           "value": 0.5
         },
         "order": {"type": "quantitative", "field": "stack_order"},
@@ -150,7 +150,32 @@
         "x": {
           "type": "ordinal",
           "axis": {"title": "Year", "titleFontSize": 16, "titleX": -45},
-          "field": "year"
+          "field": "year",
+          "scale": {
+            "domain": [
+              1924,
+              1928,
+              1932,
+              1936,
+              1948,
+              1952,
+              1960,
+              1964,
+              1968,
+              1972,
+              1976,
+              1980,
+              1984,
+              1988,
+              1992,
+              1994,
+              1998,
+              2002,
+              2006,
+              2010,
+              2014
+            ]
+          }
         },
         "y": {
           "type": "quantitative",
@@ -166,13 +191,13 @@
         }
       },
       "selection": {
-        "selector009": {"type": "single", "fields": ["medal"]},
-        "selector010": {
+        "selector045": {"type": "single", "fields": ["medal"]},
+        "selector046": {
           "type": "single",
           "fields": ["medal"],
           "on": "mouseover"
         },
-        "selector008": {
+        "selector044": {
           "type": "single",
           "fields": ["country_code"],
           "init": {"country_code": "USA"},
@@ -227,8 +252,8 @@
         }
       },
       "transform": [
-        {"filter": {"selection": "selector009"}},
-        {"filter": {"selection": "selector008"}}
+        {"filter": {"selection": "selector045"}},
+        {"filter": {"selection": "selector044"}}
       ]
     },
     {
@@ -257,7 +282,7 @@
               }
             },
             "selection": {
-              "selector008": {
+              "selector044": {
                 "type": "single",
                 "fields": ["country_code"],
                 "init": {"country_code": "USA"},
@@ -326,7 +351,7 @@
           }
         ]
       },
-      "transform": [{"filter": {"selection": "selector008"}}]
+      "transform": [{"filter": {"selection": "selector044"}}]
     }
   ],
   "data": {"name": "data-ea259c0be018a565158e7ea081be3fc3"},

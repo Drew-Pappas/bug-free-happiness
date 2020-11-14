@@ -23,16 +23,14 @@
       </div>
     
       <div class ='vis_container'>
-        <p class = 'vis_text'>Norway has the second highest number of facilities for winter sports in the world, second only to Russia. However, Russia has a population of 144.5 million compared to Norway's 5.3 million. With 73 facilities, Norway has a ratio of rinks to people of 71 thousand to 1, compared to Russia's 1.8 million to 1. The average Norwegian has a lot of opportunity to practice.</p>
+        <p class = 'vis_text'>One possible explanation is that Norway has the second highest number of facilities for winter sports in the world, second only to Russia. However, Russia has a population of 144.5 million compared to Norway's 5.3 million. With 73 facilities, Norway has a ratio of rinks to people of 71 thousand to 1, compared to Russia's 1.8 million to 1. The average Norwegian has a lot of opportunity to practice. Hovering the graph below will show you the number of rinks a country has and other countries with the same number of rinks.</p>
         <div id="vis3" class = 'visualization_button' onclick=display_vis(this)>Infrastructure Rich</div>
       </div>
 
       <div class ='vis_container'>
-        <p class = 'vis_text'>Norway's success stems primarily from their wealth and quality of life for their citizens. Norway has the second highest GDP per capita and highest average score on the UN's Human Development Index, which measures education, wealth, and life expectancy across a nation. Clicking on any nation will reveal the slope of the line from their country to Norway. The slope represents the number of HDI points per medal they would need to earn to be where Norway is today.</p>
+        <p class = 'vis_text'>However, their infrastructure wouldn't be possible without their economy. Norway's success  in the Winter Olympics stems primarily from their wealth and quality of life for their citizens. Norway has the second highest GDP per capita and highest average score on the UN's Human Development Index, which measures education, wealth, and life expectancy across a nation. Clicking on any nation below will reveal the slope of the line from their country to Norway. The slope represents the number of HDI points per medal they would need to earn to be where Norway is today.</p>
         <div id="vis4" class = 'visualization_button' onclick=display_vis(this)>It Pays to be Wealthy</div>
       </div>
-      <div id = 'test'>test</div>
-
     </main>
 
     <script>
@@ -44,7 +42,6 @@
           'vis3':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis3.json',
           'vis4':'https://raw.githubusercontent.com/Drew-Pappas/bug-free-happiness/master/visualizations/display_vis4.json',
         }
-        console.log('ran');
         vegaEmbed(visTag,visualizations[vis.id]);
 
         vis.onclick = undefined;
